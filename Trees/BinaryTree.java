@@ -1,7 +1,7 @@
 package Trees;
 
 import java.util.*;
-class Tree{
+class myTree{
     Node root;
     class Node{
         Node left,right;
@@ -51,7 +51,7 @@ class Tree{
 }
 public class BinaryTree{
 	public static void main(String[] args) {
-		Tree bt=new Tree();
+		myTree bt=new myTree();
 		bt.insertRoot();
 		bt.display(bt.root);
 	}

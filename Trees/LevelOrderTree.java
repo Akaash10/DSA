@@ -1,7 +1,7 @@
 package Trees;
 
 import java.util.*;
-class Tree {
+class LevelTree {
     static Node root;
     class Node {
         Node left, right;
@@ -75,7 +75,7 @@ class Tree {
 
 public class LevelOrderTree {
     public static void main(String[] args) {
-        Tree t = new Tree();
+    	LevelTree t = new LevelTree();
         int arr[] = { 1, 2, 3, 4, 5, 6 };
         t.insert(arr);
         int search=5;

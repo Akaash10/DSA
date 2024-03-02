@@ -25,7 +25,7 @@ class Stack {
         return ptr == arr.length;
     }
 
-    private boolean isEmpty() {
+    boolean isEmpty() {
         return ptr == -1;
     }
 
@@ -81,6 +81,7 @@ public class Main {
         System.out.println("Pop: " + s.pop());
         System.out.println("Peek: " + s.peek());
         System.out.println("Index: " + s.search(10));
+        System.out.println("Stack is empty? "+s.isEmpty());
         s.display();
     }
 }
