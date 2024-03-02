@@ -90,7 +90,7 @@ public class SingleList{
         l.insert(40);
         l.insertAtFirst(100);
         l.insertAtLast(80);
-        l.display();
+        l.display();  
         l.insertAtSpecific(152,3);
         l.display();
         l.deleteFirst();
