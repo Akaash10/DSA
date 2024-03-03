@@ -9,9 +9,9 @@ class MyException extends Exception {
 }
 
 class Stack {
-    private int arr[];
+    protected int arr[];
     private static final int size = 10;
-    private static int ptr = -1;
+    protected static int ptr = -1;
 
     Stack() {
         this(size);
@@ -21,11 +21,11 @@ class Stack {
         this.arr = new int[size];
     }
 
-    private boolean isFull() {
-        return ptr == arr.length;
+    protected boolean isFull() {
+        return ptr == arr.length-1;
     }
 
-    boolean isEmpty() {
+    protected boolean isEmpty() {
         return ptr == -1;
     }
 
@@ -74,8 +74,12 @@ class Stack {
 
 public class Main {
     public static void main(String[] args) throws MyException {
-        Stack s = new Stack(3);
+        Stack s = new Dynamicstack(3);
         s.push(10);
+        s.push(20);
+        s.push(30);
+        s.push(20);
+        s.push(30);
         s.push(20);
         s.push(30);
         System.out.println("Pop: " + s.pop());
