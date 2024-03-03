@@ -16,6 +16,7 @@ public class Dynamicstack extends Stack {
                 temp[i]=arr[i];
             }
             arr=temp;
+            //arr = Arrays.copyOfRange(arr, 0, arr.length * 2);
         }
         super.push(value);
     }

@@ -82,6 +82,8 @@ public class Main {
         s.push(30);
         s.push(20);
         s.push(30);
+        s.push(30);
+        s.push(30);
         System.out.println("Pop: " + s.pop());
         System.out.println("Peek: " + s.peek());
         System.out.println("Index: " + s.search(10));
