@@ -19,6 +19,7 @@ public class linearSearch{
     }
 }
 
+//limitation - works over sorted and unsorted array
 //best case- O(1)
 //average case- O(N+1/2);
 //worst case- O(N)
