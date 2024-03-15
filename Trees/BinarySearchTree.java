@@ -73,6 +73,41 @@ class Tree {
         }
         return Math.abs(height(n.left)-height(n.right))<=1&&findBalanced(n.left)&&findBalanced(n.right);
     }
+
+    public static Node delete(Node root,int value){
+        if(root==null){
+            return null;
+        }
+        if(root.value==value){
+            if(root.left==null&&root.right==null){
+                return null;
+            }
+            else if(root.left==null&&root.right!=null){
+                return root.right;
+            }
+            else if(root.left!=null&&root.right==null){
+                return root.left;
+            }
+            else{
+                root.value=findMin(root.right);
+                root.right=delete(root.right,root.value);
+            }
+        }
+        if(root.value<value){
+            root.right=delete(root.right,value);
+        }
+        if(root.value>value){
+            root.left=delete(root.left,value);
+        }
+        return root;
+    }
+    
+    public static int findMin(Node temp){
+        if(temp.left==null){
+            return temp.value;
+        }
+        return findMin(temp.left);
+    }
 }
 
 public class BinarySearchTree {
@@ -81,6 +116,7 @@ public class BinarySearchTree {
         Tree bst = new Tree();
         bst.insert(num);
         bst.display(bst.root);
+        bst.delete(bst.root,num.nextInt());
         System.out.println();
         System.out.println("Tree is empty? :"+bst.isEmpty());
         System.out.println("Height of tree? :"+bst.height(bst.root));
